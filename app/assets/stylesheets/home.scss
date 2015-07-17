@@ -1,0 +1,33 @@
+.home-controller.action-show {
+  .centered-page-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  ul.notification-description {
+    li {
+      display: inline;
+      float: left;
+      margin: 0;
+      text-align: left;
+      vertical-align: baseline;
+      width: 35%;
+      &:nth-child(2n) {
+        width: 65%;
+        min-height: 32px;
+      }
+    }
+  }
+}
+.notification {
+  width: 500px;
+}
+.info {
+  width: 800px;
+  i {
+    font-size: 6em;
+    color: $thirdColor;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,106 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: $topBarHeight;
+}
+.navbar-default {
+  background-color: $brandColor;
+  .avatar {
+    padding: 7px 0;
+  }
+  .navbar-brand {
+    padding: 5px;
+    i {
+      font-size: 2em;
+    }
+    .app-title {
+      font-size: 2.5em;
+    }
+  }
+  .navbar-brand, .dropdown-toggle {
+    color: white !important;
+  }
+  .navbar-nav .open > a {
+    background-color: lighten($brandColor, 10%) !important;
+  }
+}
+.footer {
+  a {
+    color: $navbar-default-link-color;
+  }
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: $footerHeight;
+  border-top: 1px solid #f5f5f5;
+
+  .fa {
+    font-size: 2em;
+  }
+  ul > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    display: inline-block;
+  }
+  .nav-links {
+    ul > li > a {
+      line-height: 30px;
+    }
+  }
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  width: 1040px;
+  padding-bottom: 30px;
+}
+.steps-description {
+  width: 800px;
+}
+body > .page-header {
+  font-size: 2em;
+  h1 {
+    margin-top: 15px;
+    color: $brandColor;
+  }
+  padding: 5px 60px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.stack-with-number {
+  margin-right: 10px;
+  color: $secondColor;
+  .number {
+    color: white;
+  }
+}
+
+.circular {
+  width: 35px;
+  height: 35px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}

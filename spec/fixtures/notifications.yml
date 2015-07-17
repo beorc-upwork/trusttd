@@ -1,0 +1,10 @@
+test:
+  id: 1
+  payload:
+    transactionTime: "2014-09-05T13:47:51-06:00"
+    lineItems:
+      - productTitle: "Product Title"
+    customer:
+      shipping:
+        fullName: "John Doe"
+        email: "john@doe.net"

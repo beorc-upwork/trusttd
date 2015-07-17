@@ -1,0 +1,8 @@
+doctype html
+html
+  head = render 'layouts/head'
+  body class="#{body_controller_action_class}"
+    = render 'layouts/topbar'
+    .page-header = content_for :page_header
+    .container = yield
+    = render 'layouts/footer'

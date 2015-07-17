@@ -1,0 +1,27 @@
+footer.footer
+  .container
+    .row
+      .col-sm-4.nav-links
+        ul.list-inline
+          li = link_to 'Blog', '#'
+          li = link_to 'Contact', '#'
+          li = link_to 'About', '#'
+          li = link_to 'T&C\'s', '#'
+          li = link_to 'Privacy', '#'
+
+      .col-sm-4.social-links.text-center
+        ul.list-inline
+          li = link_to '#' do
+            = fa_icon 'facebook-official'
+          li = link_to '#' do
+            = fa_icon 'google-plus'
+          li = link_to '#' do
+            = fa_icon 'linkedin-square'
+          li = link_to '#' do
+            = fa_icon 'twitter'
+
+      .col-sm-4.copyright
+        .pull-right.text-muted
+          |&copy;
+          ' 
+          |2015 Infinite Alchemy Pty Ltd

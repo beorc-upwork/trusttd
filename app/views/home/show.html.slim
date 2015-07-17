@@ -1,0 +1,41 @@
+title Trusttd
+
+- provide :page_header do
+  h1 Product profile
+h2.text-center Platform integration check
+
+.container.steps-description
+  table
+    tr
+      td = render partial: 'number_sign', locals: { value: 1 }
+      td Make sure you have completed the required integration configuration on the payment/hosting platform through which you are selling your product.
+    tr
+      td = render partial: 'number_sign', locals: { value: 2 }
+      td Process a test sale of the product using the payment/hosting platform or wait for the next actual sale to occur.
+    tr
+      td = render partial: 'number_sign', locals: { value: 3 }
+      td Hit the “refresh” button below. The details of the last sale of this product notified to trusttd will be displayed below.
+    tr
+      td = render partial: 'number_sign', locals: { value: 4 }
+      td Ensure that all fields below contain an entry which relates to the last sale that was processed.
+
+.centered-page-section
+  = link_to 'Refresh', root_path, class: 'btn btn-primary btn-lg text-center'
+
+.container.notification
+  - if @notification
+    ul.notification-description.clearfix
+      - [:product_name, :customer_name, :customer_email, :sale_date].each do |attr|
+        li
+          strong
+            = Notification.human_attribute_name(attr)
+            |:
+        li = @notification.send(attr)
+  - else
+    p There is no any notifications yet...
+
+.container.info
+  table
+    tr
+      td = fa_icon 'info-circle'
+      td We strongly recommend you test/confirm the integration of trusttd with your product’s payment/hosting platform BEFORE finalising the creation of your product profile on trusttd, however this step is not mandatory.

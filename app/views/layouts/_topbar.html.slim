@@ -1,0 +1,18 @@
+nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      = link_to root_path, class: 'navbar-brand' do
+        i.glyphicon.glyphicon-check
+        ' 
+        span.app-title trusttd
+    #navbar
+      ul.nav.navbar-nav.pull-right
+        li.avatar = image_tag 'avatar.jpg', class: 'circular'
+        li.dropdown
+          = link_to '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', role: 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false' do
+            |John Smith
+            span.caret
+          ul.dropdown-menu
+            li = link_to 'My Profile', '#'
+            li.divider role='separator'
+            li = link_to 'Sign out', '#'
